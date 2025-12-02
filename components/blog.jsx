@@ -1,6 +1,5 @@
 "use client";
 import Image from "next/image";
-
 export default function Blog() {
   const blogs = [
     {
@@ -49,7 +48,7 @@ export default function Blog() {
           {blogs.map((blog, index) => (
             <div
               key={index}
-              className="relative bg-white rounded-xl overflow-hidden shadow-lg hover:shadow-2xl border border-slate-200 transition-all duration-500 hover:-translate-y-2"
+              className="relative bg-white rounded-xl overflow-hidden shadow-lg hover:shadow-2xl border border-slate-200 transition-all duration-500 hover:-translate-y-2 blog-page-main"
             >
               {index === 2 && (
                 <div>

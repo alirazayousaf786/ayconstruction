@@ -68,3 +68,16 @@
   clip-path: polygon(0% 15%, 0 0, 15% 0%, 100% 0, 100% 27%, 59% 27%, 59% 82%, 100% 83%, 100% 100%, 15% 100%, 0 100%, 0% 85%);
   
 }
+
+
+/* Blog page all css */
+.blog-page-main-first {
+  clip-path: polygon(
+    0% 15%, 0 0, 15% 0%, 85% 0%, 100% 0, 100% 15%, 100% 76%, 
+    82% 76%, 83% 100%, 15% 100%, 0 100%, 0% 85%
+  );
+  background-color: greenyellow;
+}
+.blog-article-card {
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}

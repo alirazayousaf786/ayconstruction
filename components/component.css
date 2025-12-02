@@ -65,5 +65,24 @@
   animation: marqueeScroll 15s linear infinite;
 }
 
-
+@media (max-width: 1164px) {
+  .header-navbar {
+    width: 100% !important;
+  }
+}
+@media (max-width: 1004px) {
+  .header-navbar  {
+    width: 100% !important;
+  }
+}
+@media (max-width: 943px) {
+  .header-navbar  {
+    width: 100% !important;
+  }
+}
+@media (max-width: 770px) {
+  .header-navbar  {
+    width: 100% !important;
+  }
+}
 
