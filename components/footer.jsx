@@ -277,13 +277,13 @@ export default function Footer() {
                 projects.
               </p>
 
-              <div className="relative p-2">
+              <div className="relative p-3">
                 <input
                   type="email"
                   placeholder="Email Here"
                   className="p-2 border border-slate-300 bg-white w-full rounded-lg text-black"
                 />
-                <button className="text-[13px] font-bold px-3 py-[6px] bg-rose-700 text-white rounded absolute bottom-4 right-3 hover:bg-rose-800 transition">
+                <button className="border-2 border-slate-800 text-[13px] font-bold px-3 mb-1 mr-1 py-1 bg-rose-700 text-white rounded absolute bottom-4 right-3 hover:bg-rose-800 transition">
                   SUBMIT
                 </button>
               </div>
