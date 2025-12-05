@@ -8,7 +8,6 @@ import { GiHamburgerMenu } from "react-icons/gi";
 import { IoMdClose } from "react-icons/io";
 import { FaAngleDown } from "react-icons/fa6";
 import Button from "@/components/button";
-import Image from "next/image";
 import { usePathname } from "next/navigation";
 import "./component.css";
 
@@ -203,9 +202,9 @@ export default function Header() {
                 )}
               </div>
 
-              <button className="mt-5 w-full p-2 border-4 border-double border-white font-bold text-white">
-                GET A QUOTE
-              </button>
+              <span className="hidden md:block mobile-screen-open">
+              <Button label="GET A QUOTE" />
+            </span>
             </div>
           )}
         </div>

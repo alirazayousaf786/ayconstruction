@@ -115,15 +115,15 @@ export default function Testimonial() {
         <div className="flex justify-center gap-4 mt-6 z-10 relative">
           <button
             onClick={prev}
-            className="p-4 bg-white rounded-full shadow-lg hover:shadow-2xl hover:bg-rose-100 transition-all duration-300"
+            className="p-4 bg-rose-800 rounded-full  shadow-4xl  transition-all duration-300"
           >
-            <FaChevronLeft className="w-6 h-6 text-rose-800 hover:text-rose-600 transition-colors duration-300" />
+            <FaChevronLeft className="w-6 h-6 text-white hover:text-3xl transition-colors duration-300" />
           </button>
           <button
             onClick={next}
-            className="p-4 bg-white rounded-full shadow-lg hover:shadow-2xl hover:bg-rose-100 transition-all duration-300"
+            className="p-4 bg-rose-800 rounded-full  shadow-4xl  transition-all duration-300"
           >
-            <FaChevronRight className="w-6 h-6 text-rose-800 hover:text-rose-600 transition-colors duration-300" />
+            <FaChevronRight className="w-6 h-6 text-white hover:text-3xl transition-colors duration-300" />
           </button>
         </div>
       </Container>
