@@ -4,7 +4,7 @@ import { FaPhoneAlt, FaChevronLeft, FaChevronRight } from "react-icons/fa";
 import Image from "next/image";
 import Button from "@/components/button";
 import Link from "next/link";
-import { useRouter } from "next/router";
+import { useRouter } from "next/navigation";
 export default function ResponsiveCarousel() {
   const slides = [
     {
@@ -71,7 +71,7 @@ const Router=useRouter();
                 {slide.description}
               </p>
               <div className="flex flex-col sm:flex-row gap-4 items-center">
-                <Link herf="quotform" onClick={()=> Router.push("/quotform")}><Button label="GET A QUOTE" /></Link>
+                <Link href="quotform" onClick={()=> Router.push("/quotform")}><Button label="GET A QUOTE" /></Link>
                 <div className="flex items-center gap-3 h-[76px] bg-rose-800 bg-opacity-60 px-5 py-3 rounded-full font-semibold shadow-lg hover:bg-opacity-90 transition cursor-pointer">
                   <FaPhoneAlt size={20} />
                   <span className="text-xl">{slide.phone}</span>
