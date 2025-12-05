@@ -155,7 +155,7 @@ export default function Services() {
 
        {/* pop up section */}
         {open && service && (
-          <div className="fixed inset-0 bg-black/60 backdrop-blur-sm flex justify-center items-center z-[999] animate-fadeIn">
+          <div className="fixed inset-0 bg-black/60 backdrop-blur-sm flex justify-center items-center z-[10100] animate-fadeIn">
             <div
               className="
               bg-white/20 backdrop-blur-2xl p-7 rounded-2xl shadow-2xl 
