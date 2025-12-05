@@ -5,42 +5,42 @@ import "./component.css";
 export default function Card() {
   const cards = [
     {
-      image: "/safety.webp",
+      image: "/c1.jpg",
       title: "Structural Rehabilitation",
       referenc: "Reinforcing aging foundations with safety compliance.",
       paragraph:
         "We specialize in strengthening commercial and residential structures by upgrading foundations and components using advanced reinforcement techniques.",
     },
     {
-      image: "/safety.webp",
+      image: "/c2.jpg",
       title: "Interior Design & Finishing",
       referenc: "Crafting Interiors that Inspire",
       paragraph:
         "Our interior design and finishing services add elegance and functionality to your spaces. From flooring and ceilings to lighting and décor, we deliver a seamless blend of style and practicality tailored to client preferences.",
     },
     {
-      image: "/safety.webp",
+      image: "/c3.jpg",
       title: "Infrastructure Development",
       referenc: "Building the Foundations of Progress.",
       paragraph:
         "We undertake large-scale infrastructure projects such as roads, bridges, drainage systems, and public utilities. Our experienced engineers ensure every project meets sustainability and durability standards.",
     },
      {
-      image: "/safety.webp",
+      image: "/c4.jpg",
       title: "Structural Rehabilitation",
       referenc: "Reinforcing aging foundations with safety compliance.",
       paragraph:
         "We specialize in strengthening commercial and residential structures by upgrading foundations and components using advanced reinforcement techniques.",
     },
     {
-      image: "/safety.webp",
+     image: "/c5.jpg",
       title: "Interior Design & Finishing",
       referenc: "Crafting Interiors that Inspire",
       paragraph:
         "Our interior design and finishing services add elegance and functionality to your spaces. From flooring and ceilings to lighting and décor, we deliver a seamless blend of style and practicality tailored to client preferences.",
     },
     {
-      image: "/safety.webp",
+      image: "/c6.jpg",
       title: "Infrastructure Development",
       referenc: "Building the Foundations of Progress.",
       paragraph:
@@ -64,13 +64,12 @@ export default function Card() {
             <div className="absolute -top-10 -right-10 w-40 h-40 bg-rose-200/40 rounded-full blur-2xl group-hover:blur-xl transition-all duration-700"></div>
 
             <div className="flex items-start gap-5">
-              <div className="relative">
+              <div className="relative bg-red-300/30 rounded-full p-3 w-16 h-16 flex items-center justify-center group-hover:scale-110 transition-all duration-700">
                 <div className="absolute inset-0 bg-rose-300/40 blur-xl opacity-0 group-hover:opacity-100 transition-all duration-700"></div>
                 <Image
                   src={card.image}
                   alt={card.title}
-                  width={70}
-                  height={70}
+                  fill
                   className="rounded-full border-2 border-rose-300 p-1 group-hover:scale-110 transition-all duration-700"
                 />
               </div>
