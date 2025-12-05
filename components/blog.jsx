@@ -82,7 +82,7 @@ export default function Blog() {
                     height="20"
                     viewBox="0 0 120 120"
                     xmlns="http://www.w3.org/2000/svg"
-                    className="absolute bottom-53 left-0 blog-svg md:bottom-41 "
+                    className="absolute bottom-53 left-0 blog-svg md:bottom-54 "
                   >
                     <polygon points="60,5 110,60 60,115 10,60" fill="#f43f5e" />
 
