@@ -9,6 +9,7 @@ import { IoMdClose } from "react-icons/io";
 import { FaAngleDown } from "react-icons/fa6";
 import Button from "@/components/button";
 import { usePathname } from "next/navigation";
+import {useRouter} from 'next/navigation';
 import "./component.css";
 
 export default function Header() {
@@ -27,6 +28,9 @@ export default function Header() {
     window.addEventListener("scroll", handleScroll);
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
+
+  const Router=useRouter("/quotform");
+  
 
   return (
     <section>
@@ -133,9 +137,11 @@ export default function Header() {
               </li>
             </ul>
 
+            <Link href="/quotform" onClick={() => Router.push('/quotform')}>
             <span className="hidden md:block mobile-screen-open">
               <Button label="GET A QUOTE" />
             </span>
+            </Link>
           </div>
 
           {open && (
@@ -202,9 +208,11 @@ export default function Header() {
                 )}
               </div>
 
-              <span className="hidden md:block mobile-screen-open">
+             <Link href="/quotform" onClick={() => Router.push('/quotform')}>
+            <span className="hidden md:block mobile-screen-open">
               <Button label="GET A QUOTE" />
             </span>
+            </Link>
             </div>
           )}
         </div>

@@ -3,7 +3,8 @@ import React, { useState, useEffect } from "react";
 import { FaPhoneAlt, FaChevronLeft, FaChevronRight } from "react-icons/fa";
 import Image from "next/image";
 import Button from "@/components/button";
-
+import Link from "next/link";
+import { useRouter } from "next/router";
 export default function ResponsiveCarousel() {
   const slides = [
     {
@@ -45,7 +46,7 @@ export default function ResponsiveCarousel() {
 
   const next = () => setCurrent((prev) => (prev + 1) % total);
   const prev = () => setCurrent((prev) => (prev - 1 + total) % total);
-
+const Router=useRouter();
   return (
     <div className="w-full relative">
       <div className="relative w-full h-[450px] sm:h-[550px] md:h-[650px] overflow-hidden  shadow-2xl">
@@ -70,7 +71,7 @@ export default function ResponsiveCarousel() {
                 {slide.description}
               </p>
               <div className="flex flex-col sm:flex-row gap-4 items-center">
-                <Button label="GET A QUOTE" />
+                <Link herf="quotform" onClick={()=> Router.push("/quotform")}><Button label="GET A QUOTE" /></Link>
                 <div className="flex items-center gap-3 h-[76px] bg-rose-800 bg-opacity-60 px-5 py-3 rounded-full font-semibold shadow-lg hover:bg-opacity-90 transition cursor-pointer">
                   <FaPhoneAlt size={20} />
                   <span className="text-xl">{slide.phone}</span>

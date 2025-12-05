@@ -138,7 +138,7 @@ export default function BookingForm() {
 
           {/* Contact Information */}
           <div>
-            <h3 className="text-3xl font-semibold text-slate-800 mb-6">Contact Information</h3>
+            <h3 className="text-3xl font-semibold text-rose-800 mb-6">Contact Information</h3>
 
             <ul className="space-y-6">
               <li className="flex items-start gap-4">
