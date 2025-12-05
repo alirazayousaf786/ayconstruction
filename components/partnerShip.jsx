@@ -4,11 +4,9 @@ import Counter from "../components/counter";
 import { FaArrowRightFromBracket } from "react-icons/fa6";
 import Fourth from "../components/fourhero";
 import Container from "@/components/container";
-import Link from "next/link";
 import "./component.css";
-import {useRouter} from "next/navigation";
+
 export default function PartNerShip() {
-  const Router=useRouter();
   return (
     <>
       <Container>
@@ -71,20 +69,17 @@ We believe in creating spaces that are truly worth building and stand the test o
               className="h-73"
             />
 
-          <SimpleCard
-  img="/constructionImage_05.png"
-  title="Best Quality"
-  subtitle="Services*"
-  desc={`Known for our superior construction work and strong quality standards, we take pride in every project we complete.
+            <SimpleCard
+              img="/constructionImage_05.png"
+              title="Best Quality"
+              subtitle="Services*"
+              desc="Known for our superior construction work and strong quality standards, we take pride in every project we complete.
 Our team uses advanced methods and skilled workmanship to ensure reliable and lasting structures.
 We deliver services that are efficient, trustworthy, and focused on client needs.
 From planning to finishing, every step is handled with attention to detail and safety.
-We aim to build spaces that add value, look outstanding, and remain durable for years.`}
->
-  <Link href="/project">
-    <button onClick={() => Router.push("/project")}>Get A Quote</button>
-  </Link>
-</SimpleCard>
+We aim to build spaces that add value, look outstanding, and remain durable for years."
+              btn="Project"
+            />
 
             <div className="grid lg:grid-cols-2 md:grid-cols-2 sm:grid-cols-1 gap-3 rounded-2xl">
               {["/p1.jpg", "/p2.jpg", "/p3.jpg", "/p4.jpg"].map((item, i) => (
