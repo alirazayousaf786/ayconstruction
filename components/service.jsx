@@ -3,11 +3,9 @@ import React, { useState } from "react";
 import { GoArrowUpRight } from "react-icons/go";
 import { IoClose } from "react-icons/io5";
 import { createPortal } from "react-dom";
-
 import Image from "next/image";
 
 export default function Services() {
-
   const services = [
     {
       image: "/corsel4.jpg",
@@ -38,16 +36,17 @@ export default function Services() {
   const handleOpen = (servic) => {
     setService(servic);
     setOpen(true);
+   
   };
 
-  const handleClose = () => setOpen(false);
+  const handleClose = () => {
+    setOpen(false);
+    document.body.style.overflow = 'unset'; // scroll unlock
+  };
 
   return (
     <>
-     
-
-      {/* bottom section */}
-      <section className="w-full py-10 ">
+      <section className="w-full py-10">
         <div className="flex items-center justify-center gap-2 mb-14">
           <h1 className="text-3xl text-center text-rose-800 font-extrabold tracking-widest uppercase">
             We Provide Services
@@ -59,23 +58,9 @@ export default function Services() {
           {services.map((service, index) => (
             <div
               key={index}
-              className="
-                group bg-white/10 
-                rounded-xl p-6 shadow-xl border border-white/20 
-                backdrop-blur-xl 
-                transition-all duration-500 cursor-pointer
-                hover:shadow-2xl hover:-translate-y-3 hover:border-rose-600/60
-                hover:bg-white/20
-                relative overflow-hidden
-              "
+              className="group bg-white/10 rounded-xl p-6 shadow-xl border border-white/20 backdrop-blur-xl transition-all duration-500 cursor-pointer hover:shadow-2xl hover:-translate-y-3 hover:border-rose-600/60 hover:bg-white/20 relative overflow-hidden"
             >
-              <div
-                className="
-                  absolute inset-0 rounded-xl opacity-0 
-                  
-                  transition-all duration-500 group-hover:opacity-100
-                "
-              ></div>
+              <div className="absolute inset-0 rounded-xl opacity-0 transition-all duration-500 group-hover:opacity-100"></div>
 
               <div className="relative z-10">
                 <Image
@@ -93,32 +78,22 @@ export default function Services() {
 
                   <span
                     onClick={() => handleOpen(service)}
-                    className="
-                      text-2xl text-rose-700 bg-rose-100 
-                      p-2 rounded-full shadow-md 
-                      group-hover:bg-rose-700 group-hover:text-white 
-                      transition-all duration-500
-                    "
+                    className="text-2xl text-rose-700 bg-rose-100 p-2 rounded-full shadow-md group-hover:bg-rose-700 group-hover:text-white transition-all duration-500 cursor-pointer"
                   >
                     {service.icon}
                   </span>
                 </div>
 
-                <div
-                  className="
-                    mt-2 w-0 h-[3px] bg-rose-700 
-                    group-hover:w-full transition-all duration-500
-                  "
-                ></div>
+                <div className="mt-2 w-0 h-[3px] bg-rose-700 group-hover:w-full transition-all duration-500"></div>
               </div>
             </div>
           ))}
         </div>
 
-        {/* pop up section */}
-        {open && service && (
-          <div className="fixed inset-0 bg-black/60 backdrop-blur-sm flex justify-center items-center z-[999999px] animate-fadeIn ">
-            <div className="bg-white/20 backdrop-blur-2xl p-7 rounded-2xl shadow-2xl border border-white/30 max-w-lg w-[90%] relative animate-scaleUp mt-5">
+        {/* Portal-based Popup */}
+        {open && service && createPortal(
+          <div className="fixed inset-0 bg-black/60 backdrop-blur-sm flex justify-center items-center z-[9999]">
+            <div className="bg-white/20 backdrop-blur-2xl p-7 rounded-2xl shadow-2xl border border-white/30 max-w-lg w-[90%] relative">
               <button
                 onClick={handleClose}
                 className="absolute -top-3 -right-3 bg-white p-2 rounded-full shadow-md hover:bg-rose-600 hover:text-white transition"
@@ -147,13 +122,10 @@ export default function Services() {
                   Contact Us
                 </button>
               </div>
-              
             </div>
-            
-          </div>
-          
+          </div>,
+          document.body
         )}
-        
       </section>
     </>
   );

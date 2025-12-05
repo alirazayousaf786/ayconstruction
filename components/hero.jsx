@@ -71,9 +71,9 @@ export default function ResponsiveCarousel() {
               </p>
               <div className="flex flex-col sm:flex-row gap-4 items-center">
                 <Button label="GET A QUOTE" />
-                <div className="flex items-center gap-3 bg-rose-900 bg-opacity-60 px-5 py-3 rounded-full font-semibold shadow-lg hover:bg-opacity-90 transition cursor-pointer">
+                <div className="flex items-center gap-3 h-[76px] bg-rose-800 bg-opacity-60 px-5 py-3 rounded-full font-semibold shadow-lg hover:bg-opacity-90 transition cursor-pointer">
                   <FaPhoneAlt size={20} />
-                  <span>{slide.phone}</span>
+                  <span className="text-xl">{slide.phone}</span>
                 </div>
               </div>
             </div>

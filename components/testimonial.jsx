@@ -17,7 +17,7 @@ export default function Testimonial() {
     icon: "⭐⭐⭐⭐",
   },
   {
-    image: "/project_2.jpg",
+    image: "/project_1.jpg",
     name: "Alice",
     worktitle: "Interior Designer",
     description:
@@ -37,7 +37,7 @@ export default function Testimonial() {
     icon: "⭐⭐⭐⭐",
   },
   {
-    image: "/project_4.jpg",
+    image: "/projects_6.jpg",
     name: "Sophia",
     worktitle: "Renovation Expert",
     description:

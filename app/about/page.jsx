@@ -102,7 +102,7 @@ export default function About() {
 
             <div className="hidden md:block">
               <Image
-                src="/formimage.jpg"
+                src="/blog_2.jpg"
                 alt="Building Design"
                 width={220}
                 height={220}
