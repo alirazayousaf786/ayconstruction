@@ -83,13 +83,13 @@ export default function ResponsiveCarousel() {
         {/* Error  Buttons */}
         <button
           onClick={prev}
-          className="absolute left-5 top-1/2 -translate-y-1/2 bg-rose-800 bg-opacity-60 text-white p-4 rounded-full z-40 hover:bg-opacity-90 transition-shadow shadow-lg"
+          className="hidden sm:block absolute left-5 top-1/2 -translate-y-1/2 bg-rose-800 bg-opacity-60 text-white p-4 rounded-full z-40 hover:bg-opacity-90 transition-shadow shadow-lg"
         >
           <FaChevronLeft size={24} />
         </button>
         <button
           onClick={next}
-          className="absolute right-5 top-1/2 -translate-y-1/2 bg-rose-800 bg-opacity-60 text-white p-4 rounded-full z-40 hover:bg-opacity-90 transition-shadow shadow-lg"
+          className="hidden sm:block absolute right-5 top-1/2 -translate-y-1/2 bg-rose-800 bg-opacity-60 text-white p-4 rounded-full z-40 hover:bg-opacity-90 transition-shadow shadow-lg"
         >
           <FaChevronRight size={24} />
         </button>

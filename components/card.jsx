@@ -6,8 +6,8 @@ export default function Card() {
   const cards = [
     {
       image: "/c1.jpg",
-      title: "Structural Rehabilitation",
-      referenc: "Reinforcing aging foundations with safety compliance.",
+      title: "Structural Rehabilitation ",
+      referenc: "Reinforcing aging foundations ",
       paragraph:
         "We specialize in strengthening commercial and residential structures by upgrading foundations and components using advanced reinforcement techniques.",
     },
@@ -28,7 +28,7 @@ export default function Card() {
      {
       image: "/c4.jpg",
       title: "Structural Rehabilitation",
-      referenc: "Reinforcing aging foundations with safety compliance.",
+      referenc: "Reinforcing aging  safety compliance.",
       paragraph:
         "We specialize in strengthening commercial and residential structures by upgrading foundations and components using advanced reinforcement techniques.",
     },
