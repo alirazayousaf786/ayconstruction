@@ -8,6 +8,7 @@ import Blog from "@/components/blog"
 import Accordion from "@/components/accordion"
 import Service from "@/components/service"
 import Team from "@/components/team"
+import Testimonial from "@/components/testimonial"
 export default function Home() {
   return (
     <>
@@ -18,6 +19,7 @@ export default function Home() {
    <PricingCard />
   <Team />
    <FormSubmit />
+   <Testimonial />
    <Blog />
    <Accordion />
     </>
