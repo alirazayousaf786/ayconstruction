@@ -1,7 +1,7 @@
 "use client";
 import React, { useState } from "react";
 import Image from "next/image";
-
+import "./component.css"
 export default function FourthHero() {
   const [activeTab, setActiveTab] = useState(0);
 
@@ -42,7 +42,7 @@ export default function FourthHero() {
 
   return (
     <section className="w-full bg-slate-900 text-white py-12">
-      <div className="max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-10 px-4">
+      <div className="max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-2  gap-10 px-4 fourhero-main-section">
 
         {/* left side */}
         <div className="space-y-8">
@@ -57,7 +57,7 @@ export default function FourthHero() {
               className="rounded-xl shadow-xl object-cover border border-slate-700 hover:scale-105 transition"
             />
 
-            <div className="bg-rose-800 p-5 rounded-xl w-full shadow-lg border border-rose-700">
+            <div className="bg-rose-800 p-5 rounded-xl w-full shadow-lg border border-rose-700 md:text-left text-center">
               <span className="text-sm uppercase tracking-wide text-slate-100">Starting From</span>
               <h5 className="text-lg font-semibold mt-1">Mortgage Credit</h5>
               <span className="text-4xl font-extrabold mt-2 block">15.5</span>
