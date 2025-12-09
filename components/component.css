@@ -121,3 +121,8 @@
   }
 } 
 
+@media (max-width: 896px){
+  .mobile-screen-open-btn{
+    display: none;
+  }
+}

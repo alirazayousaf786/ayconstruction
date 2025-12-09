@@ -137,11 +137,11 @@ export default function Header() {
               </li>
             </ul>
 
-            <Link href="/quotform" onClick={() => Router.push('/quotform')}>
-            <span className="hidden md:block mobile-screen-open">
+            
+            <span className="hidden md:block mobile-screen-open-btn ">
               <Button label="GET A QUOTE" />
             </span>
-            </Link>
+           
           </div>
 
           {open && (

@@ -106,7 +106,7 @@ export default function Teams() {
                   {second.iconImages.map((icon, i) => (
                     <div
                       key={i}
-                      className="p-2 bg-white rounded-full shadow-md hover:scale-110 transition border border-rose-300"
+                      className="p-2 bg-white rounded-full shadow-md hover:scale-110 sm:hover:scale-110-block transition border border-rose-300"
                     >
                       <Image
                         src={icon}
