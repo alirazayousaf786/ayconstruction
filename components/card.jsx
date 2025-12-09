@@ -1,7 +1,8 @@
+"use client";
 import Image from "next/image";
 import { FaArrowRightFromBracket } from "react-icons/fa6";
 import "./component.css";
-
+import { useRouter } from "next/navigation";
 export default function Card() {
   const cards = [
     {
@@ -47,7 +48,7 @@ export default function Card() {
         "We undertake large-scale infrastructure projects such as roads, bridges, drainage systems, and public utilities. Our experienced engineers ensure every project meets sustainability and durability standards.",
     },
   ];
-
+   const router = useRouter();
   return (
     <section className="py-14 px-4 max-w-[1400px] mx-auto">
       <div className="grid sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10">
@@ -122,7 +123,8 @@ export default function Card() {
             Let’s bring your vision to life.
           </span>
 
-          <button className="w-full group">
+          
+          <button onClick={() => router.push("/emergency")} className="w-full group">
             <div
               className="flex items-center justify-between bg-rose-800 p-4 rounded-xl border border-rose-900 shadow-lg
               transition-all duration-500 group-hover:bg-rose-900 group-hover:shadow-2xl group-hover:scale-[1.02]"
@@ -138,6 +140,7 @@ export default function Card() {
               </div>
             </div>
           </button>
+          
         </div>
       </div>
     </section>
