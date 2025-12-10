@@ -85,7 +85,7 @@ export default async function BlogPost({ params }) {
 
   return (
     <div className="max-w-4xl mx-auto px-6 py-10">
-      <h1 className="text-4xl font-extrabold text-rose-800 mb-5">
+      <h1 className="text-4xl font-extrabold text-rose-800 mb-5 text-center">
         {blog.heading}
       </h1>
 
@@ -93,8 +93,8 @@ export default async function BlogPost({ params }) {
         src={blog.image}
         alt={blog.title}
         width={1000}
-        height={500}
-        className="rounded-xl shadow-lg mb-6"
+        height={400}
+        className="rounded-xl shadow-lg mb-6 w-full  object-cover bg-center"
       />
 
       <p className="text-gray-700 text-lg leading-relaxed mb-6">

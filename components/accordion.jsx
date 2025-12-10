@@ -90,7 +90,7 @@ export default function HeavyAccordion() {
               : "/blog_2.jpg"
           }
           alt="Accordion Visual"
-          width={300}
+          width={400}
           height={500}
           className="rounded-lg shadow-xl transition-all duration-500 w-full max-w-md h-73"
         />
