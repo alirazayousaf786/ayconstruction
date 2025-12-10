@@ -6,6 +6,7 @@ import { MdMarkEmailUnread } from "react-icons/md";
 import { BsTelephoneFill } from "react-icons/bs";
 import { FaAngleRight } from "react-icons/fa";
 import Social from "@/components/socilaIcon";
+import { LuMoveRight } from "react-icons/lu";
 export default function Footer() {
   return (
     <>
@@ -283,8 +284,8 @@ export default function Footer() {
                   placeholder="Email Here"
                   className="p-2 border border-slate-300 bg-white w-full rounded-lg text-black"
                 />
-                <button className="border-2 border-slate-800 text-[13px] font-bold px-3 mb-1 mr-1 py-1 bg-rose-700 text-white rounded absolute bottom-4 right-3 hover:bg-rose-800 transition">
-                  SUBMIT
+                <button className="cursor-pointer transition-all hover:translate-x-2  p-2 w-8 h-8  font-bold   bg-rose-700 text-white rounded-full absolute bottom-4 right-[-1] hover:bg-rose-800 ">
+                  <i className="font-bold text-lg"><LuMoveRight size={20}/></i>
                 </button>
               </div>
             </div>
