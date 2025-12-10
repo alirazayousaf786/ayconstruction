@@ -7,6 +7,7 @@ import { MdAccessTime } from "react-icons/md";
 import { GrCertificate } from "react-icons/gr";
 import { SlEnergy } from "react-icons/sl";
 import { IoAlertOutline } from "react-icons/io5";
+import Image from "next/image"
 export default function EmergencyServices() {
   const services = [
     {
@@ -26,13 +27,52 @@ export default function EmergencyServices() {
       worktime: "100%",
     },
     {
-      title: <SlEnergy />,
+      icon: <SlEnergy />,
       title: "Always Available",
       description: "24/7 emergency support with no holidays or off-hours.",
       Respons: "Availability",
       worktime: "24/7",
     },
   ];
+const cards = [
+  {
+    image: "/c1.jpg",
+    imgtext: "100",
+    title: "Structural Damage Repair",
+    time: "20 minutes",
+    text1:"When cracks appear suddenly in walls or foundations.",
+    text2:"If a building or structure shows signs of tilting or sinking.",
+    text3:"After heavy rain, flooding, or an earthquake causes visible damage.",
+    iconok: <FcOk />,
+    timeicon: <MdAccessTime  />,
+    payment: "Callout: $50",
+  },
+    {
+    image: "/c4.jpg",
+    imgtext: "1500",
+    title: "Water Leakage Emergency Repair",
+    time: "50 minutes",
+    text1:"When water starts leaking from ceilings, walls, or underground pipes..",
+    text2:"If flooding occurs in basements or washrooms.",
+    text3:"When damp patches or mold appear suddenly.",
+    iconok: <FcOk />,
+    timeicon: <MdAccessTime  />,
+    payment: "Callout: $4000",
+  },
+    {
+    image: "/blog_1.jpg",
+    imgtext: "300",
+    title: "Electrical Fault Emergency Service",
+    time: "30 minutes",
+    text1:"When sparks, burning smells, or sudden power outages occur.",
+    text2:"If circuit breakers trip repeatedly.",
+    text3:"When outlets or switches feel hot or produce noise.",
+    iconok: <FcOk />,
+    timeicon: <MdAccessTime  />,
+    payment: "Callout: $60",
+  },
+ 
+];
 
   return (
     <>
@@ -105,7 +145,7 @@ export default function EmergencyServices() {
           </div>
         </Container>
       </section>
-      {/* Last section card design */}
+      {/* thrid section card design */}
       <section>
         <Container>
           <div>
@@ -127,7 +167,10 @@ export default function EmergencyServices() {
                 >
                   <div className="flex flex-col gap-4">
                     <div className="flex items-start gap-4">
-                     <div className="bg-slate-100 p-2 rounded-lg group transform hover:scale-105 translate-all"> <i className="text-2xl text-rose-800">{service.icon}</i></div>
+                      <div className="bg-slate-100 p-2 rounded-lg group transform hover:scale-105 translate-all">
+                        {" "}
+                        <i className="text-2xl text-rose-800">{service.icon}</i>
+                      </div>
                       <div className="flex flex-col">
                         <h3 className="text-lg font-semibold">
                           {service.title}
@@ -152,14 +195,70 @@ export default function EmergencyServices() {
       {/* Last image section */}
       <section>
         <Container>
-            <div className="flex flex-row gap-1 w-75 mx-auto bg-slate-100 p-2 rounded-lg shadow-lg items-center justify-center ">
-              <i className="mt-1 font-bold text-rose-800">
-                <IoAlertOutline  size={20} />
-              </i>
-              <h4 className="text-sm font-normal text-rose-800">
-                Trusted Emergency Response
-              </h4>
-            </div>
+          <div className="flex flex-row gap-1 w-75 mx-auto bg-slate-100 p-2 rounded-lg shadow-lg items-center justify-center ">
+            <i className="mt-1 font-bold text-rose-800">
+              <IoAlertOutline size={20} />
+            </i>
+            <h4 className="text-sm font-normal text-rose-800">
+              Emergency Solutions
+            </h4>
+          </div>
+ <div className="grid lg:grid-cols-3 md:grid-cols-2 sm:grid-cols-1 gap-6 my-10">
+  {cards.map((card, index) => (
+    <div
+      key={index}
+      className="group bg-white rounded-xl shadow-md hover:shadow-xl hover:shadow-rose-200 transition-all duration-300 border border-gray-200 p-4 w-full max-w-sm mx-auto hover:-translate-y-1
+      hover:border-b-4 hover:border-b-rose-800 cursor-pointer
+      "
+    >
+      <div className="relative overflow-hidden rounded-lg">
+        <Image
+          src={card.image}
+          alt={card.title}
+          width={350}
+          height={250}
+          className="w-full h-[180px] object-cover transform group-hover:scale-110 transition-all duration-500"
+        />
+        <div className="absolute top-2 left-2 bg-rose-800 text-white text-xs px-2 py-1 rounded-md shadow-md">
+          {card.imgtext}
+        </div>
+
+        <div className="absolute top-2 right-2 bg-black/70 text-white text-xs px-2 py-1 rounded-md flex items-center gap-1">
+          <MdAccessTime className="text-white text-sm" />
+          {card.time}
+        </div>
+      </div>
+
+      <h2 className="text-lg font-semibold mt-4">{card.title}</h2>
+
+      <div className="mt-3 space-y-2">
+        {[card.text1, card.text2, card.text3].map((text, i) => (
+          <div key={i} className="flex items-start gap-2">
+            <FcOk className="mt-1" />
+            <span className="text-gray-700 text-sm">{text}</span>
+          </div>
+        ))}
+      </div>
+
+      <hr className="my-4" />
+
+
+      <div className="flex items-center justify-between text-sm">
+        <div className="flex items-center gap-1 text-rose-800 font-medium">
+          <i>{card.timeicon}</i>
+          <span>{card.payment}</span>
+        </div>
+
+        <button className="bg-rose-800 text-white px-3 py-1.5 rounded-lg hover:bg-rose-900 transition text-sm">
+          More Details <span className="text-xl font-bold mt-1">→</span>
+        </button>
+      </div>
+    </div>
+  ))}
+</div>
+
+
+
         </Container>
       </section>
     </>
