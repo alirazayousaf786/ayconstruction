@@ -19,7 +19,7 @@ export default function UpDown() {
       <button
         onClick={handleButton}
         className="
-          fixed bottom-6 right-6 bg-rose-800 text-white p-4 rounded-full shadow-xl hover:bg-rose-900 hover:scale-110 transition-all duration-300 flex items-center justify-center "
+          fixed bottom-6 right-6 bg-rose-800 text-white p-4 rounded-full shadow-xl hover:bg-rose-900 hover:scale-110 transition-all duration-300 flex items-center justify-center animate-bounce"
       >
         <FaArrowUp size={20} />
       </button>
