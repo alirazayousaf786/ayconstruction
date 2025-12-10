@@ -39,7 +39,7 @@ export default function EmergencyServices() {
   const cards = [
     {
       image: "/c1.jpg",
-      imgtext: "100",
+      imgtext: "$100",
       title: "Structural Damage Repair",
       time: "20 minutes",
       text1: "When cracks appear suddenly in walls or foundations.",
@@ -51,7 +51,7 @@ export default function EmergencyServices() {
     },
     {
       image: "/c4.jpg",
-      imgtext: "1500",
+      imgtext: "$1500",
       title: "Water Leakage Emergency Repair",
       time: "50 minutes",
       text1: "When water starts leaking from ceilings or underground pipes.",
@@ -63,7 +63,7 @@ export default function EmergencyServices() {
     },
     {
       image: "/blog_1.jpg",
-      imgtext: "300",
+      imgtext: "$300",
       title: "Electrical Fault Emergency Service",
       time: "30 minutes",
       text1: "When sparks, burning smells, or sudden power outages occur.",
@@ -152,25 +152,25 @@ export default function EmergencyServices() {
             <h4 className="text-sm text-rose-800">Trusted Emergency Response</h4>
           </div>
 
-          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6 mt-10 px-2">
-            {services.map((service, i) => (
+          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6 mt-10 px-2 ">
+            {services.map((service, index) => (
               <div
-                key={i}
-                className="bg-white shadow-md rounded-lg p-6 hover:shadow-xl hover:border-b-4 hover:border-rose-800 transition"
+                key={index}
+                className="bg-white  rounded-lg p-6  shadow-lg hover:shadow-xl hover:shadow-rose-200 cursor-pointer hover:border-b-4 hover:border-rose-800 transition"
               >
                 <div className="flex items-start gap-3">
-                  <div className="bg-slate-100 p-2 rounded-lg">
-                    {service.icon}
+                  <div className="bg-slate-100 p-2 rounded-lg ">
+                   <i className="text-rose-800 text-xl font-bold"> {service.icon}</i>
                   </div>
                   <div>
                     <h3 className="text-lg font-semibold">{service.title}</h3>
                     <p className="text-gray-600">{service.description}</p>
                   </div>
                 </div>
-                <hr className="my-3" />
+                <hr className="my-3 bg-gray-600" />
                 <div className="flex justify-between">
                   <p>{service.Respons}</p>
-                  <span className="text-xl font-bold text-rose-800">
+                  <span className="text-3xl font-bold text-rose-800">
                     {service.worktime}
                   </span>
                 </div>
@@ -192,7 +192,7 @@ export default function EmergencyServices() {
             {cards.map((card, index) => (
               <div
                 key={index}
-                className="group bg-white rounded-xl shadow-md hover:shadow-xl hover:border-b-4 hover:border-rose-800 transition p-4"
+                className="group bg-white rounded-xl shadow-lg hover:shadow-xl hover:shadow-rose-200  duration-300 hover:border-b-4 hover:border-rose-800 transition p-4 cursor-pointer"
               >
                 <div className="relative rounded-lg overflow-hidden">
                   <Image
@@ -220,7 +220,7 @@ export default function EmergencyServices() {
                   ))}
                 </div>
 
-                <hr className="my-4" />
+                <hr className="my-4 bg-gray-600" />
 
                 <div className="flex justify-between items-center text-sm">
                   <p className="flex items-center gap-1 text-rose-800 font-medium">
@@ -235,6 +235,35 @@ export default function EmergencyServices() {
           </div>
         </Container>
       </section>
+      {/* in which add write number and email */}
+      <div className="w-full h-14 bg-rose-800 flex items-center justify-between flex-wrap rounded-t-full">
+
+  {/* left side div */}
+  <div className=" md:w-1/2 h-full flex flex-col items-center justify-center">
+    <h1 className="text-sm font-semibold ">Emergency Hotline</h1>
+
+    <div className="flex flex-row items-center gap-2 mt-1">
+      <div className="bg-rose-300 p-1 rounded-full text-green-600">
+        <i><FaWhatsapp size={20}/></i>
+      </div>
+      <span className="text-sm font-medium">+12345678</span>
+    </div>
+  </div>
+
+  {/* right side div */}
+  <div className=" md:w-1/2 h-full flex flex-col items-center justify-center">
+    <h3 className="text-sm font-semibold">Emergency Email</h3>
+
+    <div className="flex flex-row items-center gap-2 mt-1">
+      <div className="bg-rose-300 p-1 rounded-full text-white">
+        <i><FaEnvelope /></i>
+      </div>
+      <span className="text-sm font-medium">info@gmail.com</span>
+    </div>
+  </div>
+
+</div>
+
     </>
   );
 }
